@@ -1,0 +1,14 @@
+# EdidSmith (`edidsmith`)
+
+> Clean-room EDID 1.4, CTA-861, and DisplayID 2.0/2.1 parser, VESA CVT-RB2 link-budget solver, display quirk catalog, and safe rollback override CLI and stdio MCP server.
+
+## Capabilities
+- **Parser Engine**: VESA EDID 1.4 base block (Established/Standard timings, DTDs, `0xFC`/`0xFD`+CVT/`0xFE`/`0xFF`), multi-block CTA-861 (`0x02`: Audio, Speaker, SVD VIC 1..219, HDMI 1.4 VSDB, HF-VSDB `0xC45DD8`, VCDB, Colorimetry, HDR Static Metadata, Y420VDB/Y420CMDB, HF-SCDB `0x79`), and DisplayID 2.0/2.1 (`0x70`: `0x20, 0x21, 0x22, 0x23, 0x25, 0x27, 0x28, 0x2A`) with dual inner+outer checksum validation.
+- **Timing & Link-Budget Solver**: VESA CVT-RB2 (`1 kHz` DisplayID + `10 kHz` DTD `-VSync 0x1A` + `1000/1001` NTSC), 15 link standards (`hdmi14`, `hdmi20`, `hdmi21-frl1..6`, `dp12-hbr2`, `dp14-hbr3`, `dp21-uhbr10/13.5/20`, `usbc-2lane/4lane`), and DSC 1.2 8 bpp floor.
+- **Safe Override & Watchdog**: Preserves Block 1 DisplayID (`0x70`) and `0xFC`/`0xFD`/`0xFE`/`0xFF` slots; `lstat` symlink guard, atomic snapshot, readback verification, non-TTY `--yes` gate, and `sigaction` (`sa_flags=0`) 15s auto-revert.
+- **AI-Agent & UNIX Composability**: `--describe`, `--json` (`schema_version: 1`, explicit `null` keys), `--from-json -` fail-closed piping, and stdio JSON-RPC 2.0 `edidsmith mcp` (`2024-11-05`).
+
+## Install & Pricing
+- Homebrew: `brew install raydeoliveira/tap/edidsmith`
+- Agent Skill: `SKILL.md` (`skills.sh` compatible) | MCP Manifest: `server.json`
+- Free Core: `probe`, `edid inspect`, `edid budget`, `edid patch --dry-run`, `edid restore`, `quirks`, read-only MCP tools.

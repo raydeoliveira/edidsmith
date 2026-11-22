@@ -1,0 +1,31 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.raydeoliveira/edidsmith",
+  "title": "EdidSmith",
+  "description": "EDID 1.4/CTA-861/DisplayID 2.1 parser, CVT-RB2 link-budget solver, and safe EDID patcher.",
+  "version": "0.1.0",
+  "websiteUrl": "https://github.com/raydeoliveira/edidsmith",
+  "repository": {
+    "url": "https://github.com/raydeoliveira/edidsmith",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "mcpb",
+      "identifier": "https://github.com/raydeoliveira/edidsmith/releases/download/v0.1.0/edidsmith-0.1.0-macos-arm64.mcpb",
+      "version": "0.1.0",
+      "fileSha256": "dee63717c96cecdc8bea47af553cca6b1fbc7160dd5d249c2f92596b3bc0119b",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "EDIDSMITH_LICENSE_KEY",
+          "description": "Optional Polar.sh Pro license key unlocking EDID patch file writes and override apply.",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
