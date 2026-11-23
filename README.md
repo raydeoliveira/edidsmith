@@ -1,5 +1,7 @@
 # EdidSmith
 
+> **Product Hub:** [raymonddeoliveira.com/software](https://www.raymonddeoliveira.com/software#edidsmith) · **Buy EdidSmith Pro ($29):** [Polar Checkout](https://buy.polar.sh/polar_cl_pIMhrQJ83UQ82DxtgU7wU4yRWDOm9KHFbH32k35gjKV) · **Complete 4-CLI Bundle ($49, save $57):** [Bundle Checkout](https://buy.polar.sh/polar_cl_KTtCY3iQC4bzjqp93aC6LCog8UZqzZzuDgkAs3BvF74) · **Verified MCP:** [Glama](https://glama.ai/mcp/servers/raydeoliveira/edidsmith) · **Free Core:** `brew tap raydeoliveira/tap && brew install edidsmith`
+
 Clean-room EDID 1.4, CTA-861, and DisplayID 2.0/2.1 parser, VESA CVT-RB2 link-budget solver, display quirk catalog, and safe rollback override CLI and stdio MCP server for macOS Apple Silicon and Linux/SteamOS DRM.
 
 Measured release binary (`macOS arm64`, stripped + ad-hoc codesigned): **907,312 bytes (~886 KB)**, **6.3 ms** median `--version` cold start across 20 runs, zero third-party dependencies.
