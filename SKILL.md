@@ -2,7 +2,7 @@
 name: edidsmith
 description: >-
   Clean-room EDID 1.4, CTA-861, and DisplayID 2.0/2.1 parser, VESA CVT-RB2 link-budget
-  solver, and safe display override CLI and MCP server for macOS and Linux/SteamOS. Use when
+  solver, and safe display override CLI and MCP server. Use when
   inspecting display EDID/DisplayID capabilities, solving HDMI/DP/USB-C link bandwidths,
   patching Full-SBS 3840x1080 / RGB 4:4:4 / HDMI 3D / VRR / DisplayID Type VII overrides,
   or looking up display quirks.
@@ -11,6 +11,9 @@ description: >-
 # Skill: EdidSmith (`edidsmith`)
 
 ## Install & Discover
+
+The v0.1.0 CLI and MCP bundle run on Apple Silicon with macOS 14 or later. Linux and SteamOS backends are documented in the source project.
+
 ```bash
 brew install raydeoliveira/tap/edidsmith
 edidsmith --describe

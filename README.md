@@ -54,6 +54,13 @@ edidsmith quirks --vendor 3a4c --product 0574
 ```
 
 ### AI-Agent `--json` & `--from-json -` Usage
+
+With EdidSmith installed, add the [agent instructions](SKILL.md) to your project for EDID inspection and display bandwidth checks.
+
+```sh
+npx skills add raydeoliveira/edidsmith
+```
+
 ```bash
 edidsmith edid budget --width 3840 --height 1080 --hz 60 --link usbc-2lane --json
 ```
