@@ -22,19 +22,24 @@ Measured release binary (`macOS arm64`, stripped + ad-hoc codesigned): **907,312
 
 ## Install & Uninstall
 
-### Build from source (macOS 14+ Apple Silicon or Swift 6 toolchain)
-```bash
-cd projects/edidsmith
-# Or open-source build with all features unlocked offline:
+The Homebrew package runs on Apple Silicon with macOS Sonoma (14) or later. Inspect a bundled DisplayID fixture without connecting a display.
+
+```sh
+brew install raydeoliveira/tap/edidsmith
+edidsmith edid inspect --fixture displayid21-5k-tiled --json
 ```
 
-### Homebrew (when tap release is published)
-```bash
-brew install raydeoliveira/tap/edidsmith
-```
+The release page provides the macOS archive, MCP bundle and SHA-256 checksums. [Version 0.1.0 downloads](https://github.com/raydeoliveira/edidsmith/releases/tag/v0.1.0)
 
 ### Uninstall
-Remove the installed binary and optional license cache (`~/.config/edidsmith/license.json`) or override snapshots (`~/.config/edidsmith/snapshots/`). Use `edidsmith edid restore` before uninstalling if you applied a display override.
+
+If you applied a display override, restore it with `edidsmith edid restore` before uninstalling.
+
+```sh
+brew uninstall edidsmith
+```
+
+The optional license cache and override snapshots are stored in `~/.config/edidsmith/`.
 
 ## Quick Start
 
